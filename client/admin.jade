@@ -1,0 +1,22 @@
+template(name='admin')
+  .new
+    .container
+      .form-group
+        textarea.form-control(rows='10')
+        .row
+          .col-sm-12
+            btn.btn.btn-primary.btn-block#add(type='submit') Add
+        hr
+      .chicken
+        .row
+          .col-sm-6
+            btn.btn.btn-primary.btn-block#new New
+          .col-sm-6
+            btn.btn.btn-primary.btn-block#log Log
+        hr
+        .row
+          each chicken
+            .col-sm-12
+              .well
+                p.small.text-muted.text-right #{sent_at}
+                p #{message}
